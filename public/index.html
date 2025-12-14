@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Square64</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
+    <div class="intro">
+        <div class="intro-logo">
+            <img class="logo-img" src="img/logo.png" alt="">
+            <p class="intro-titulo">SQUARE<span
+                    style="color: rgb(88, 0, 0);">6</span><span style="color: rgb(0, 46, 0);">4</span></p>
+
+        </div>
+    </div>
     <header>
         <nav>
-            <img src="img/logo.png" alt="">
+            <img class="logo" src="img/logo.png" alt="">
             <ul class="nav-list">
-                <li><a class="item" href="">História</a></li>
-                <li><a class="item" href="">Peças</a></li>
-                <li><a class="item" href="">Conceitos</a></li>
-                <li><a class="item" href="">Mestres</a></li>
-                <li><a class="item" href="">Login</a></li>
+                <li><a href="">História</a></li>
+                <li><a href="">Peças</a></li>
+                <li><a href="">Conceitos</a></li>
+                <li><a href="">Mestres</a></li>
+                <li><a href="">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -23,21 +34,22 @@
     <main>
         <div class="home">
             <div class="esquerda">
-                <p class="titulo">SQUARE<span style="color: rgb(88, 0, 0);" >6</span><span style="color: rgb(0, 46, 0);" >4</span></p>
+                <p class="titulo">SQUARE<span style="color: rgb(88, 0, 0);">6</span><span
+                        style="color: rgb(0, 46, 0);">4</span></p>
                 <hr>
-                <p class="slogan" >Pense. <br> Calcule. <br> Execute.</p>
-                <p class="p-home" >
-                    No xadrez, cada decisão nasce do pensamento, se refina no cálculo e se revela na ação. 
+                <p class="slogan">Pense. <br> Calcule. <br> Execute.</p>
+                <p class="p-home">
+                    No xadrez, cada decisão nasce do pensamento, se refina no cálculo e se revela na ação.
                     O tabuleiro não perdoa impulsos: exige clareza, paciência e visão. <br> <br>
-                    Mais do que mover peças, jogar é assumir responsabilidades. 
+                    Mais do que mover peças, jogar é assumir responsabilidades.
                     Cada lance é um compromisso com a própria estratégia.</p>
 
-                    <button class="saiba-mais" >Saiba Mais</button>
+                <button class="saiba-mais">Saiba Mais</button>
             </div>
-            
-            <img class="img-peca" src="img/futura(3).png" alt="">    
 
-            <div class="direita" >
+            <img class="img-peca" src="img/futura(3).png" alt="">
+
+            <div class="direita">
                 <a href="">Jogar Agora</a>
             </div>
         </div>
@@ -48,4 +60,17 @@
     </footer>
 
 </body>
+
 </html>
+
+<script>
+    window.addEventListener("load", function () {
+        var intro = document.querySelector(".intro");
+        var piece = document.querySelector(".img-peca");
+
+        setTimeout(function () {
+            intro.classList.add("hide");
+            piece.classList.add("show");
+        }, 2000);
+    });
+</script>
