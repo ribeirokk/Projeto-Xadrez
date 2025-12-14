@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    line-height: 50px;
+    background-color: black;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 110px;
+    font-size: 17px;
+    margin-right: 7%;
+}
+
+.nav-list a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 1px;
+    bottom: -6px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+.home {
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+
+}
+
+
+.direita {
+    background-image: url(/public/img/home.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    background-color: black;
+    width: 52%;
+    height: 100vh;
+}
+
+.direita::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 0, 0, 0) 100%
+        );
+}
+
+.direita a {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 25px;
+    font-weight: lighter;
+    display: flex;
+    justify-self: center;
+    margin-top: 45%;
+}
+
+
+.esquerda {
+    width: 48%;
+    height: 100vh;
+    background-color: rgb(238, 238, 238);
+    z-index: 1;
+}
+
+.img-peca {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    margin-left: 4.5%;
+    align-self: center;
+    width: 90%;
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+.slogan {
+    font-family: 'Italiana', serif;
+    font-size: 90px;
+    display: flex;
+    justify-self: center;
+    margin-top: 10%;
+    line-height: 1;
+    text-align: center;
+}
+
+.p-home {
+    margin-left: 10%;
+    width: 80%;
+    margin-top: 10%;
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.saiba-mais {
+    font-size: 16px;
+    margin-top: 50px;
+    display: flex;
+    justify-self: center;
+    padding: 10px 20px;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    border: none;
+    transition: 0.5s;
+}
+
+.saiba-mais:hover {
+    transition: 0.8s;
+    transform: scale(1.1);
+    background-color: rgb(77, 77, 77);
+
+}
+
+.titulo {
+    margin-top: 25px;
+    display: flex;
+    justify-self: center;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.esquerda hr {
+    display: flex;
+    justify-self: center;
+    width: 30%;
+}
